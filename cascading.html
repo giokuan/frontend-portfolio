@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Bootstrap CSS Link -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- Bootstrap JS Link -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+     <!-- Google Font Link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/207e3aedc6.js" crossorigin="anonymous"></script>
+ 
+     <!-- Animate on Scroll Link -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     
+    <title>Learn CSS</title>
+</head>
+<body class="css-body">
+ 
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" ><i class="fa-solid fa-angles-left"></i></a>
+            <!-- <a href="index.html" class="homebtn" ><i class="fa-solid fa-house-chimney display-block"></i></a> -->
+            <hr>
+            <a href="#hyper-h1">Cascading Style Sheet</a> 
+            <a href="#history">Getting Started with CSS</a> 
+            <a href="#simple-document">Starting with some HTML</a>
+            <a href="#anatomy-of-html">Adding CSS to our Document </a>
+            <a href="#styling-html-elements">Styling HTML elements</a>
+            <a href="#adding-a-class">Adding a Class</a>
+            <a href="#styling-things">Styling Things based on their location in a document</a>
+            <a href="#styling-based-on-state">Styling based on state</a>
+            <a href="#combining-selectors">Combining Selectors and Combinators</a>
+            <a href="#summary">Summary</a>
+            
+        </div>
+        
+        <div id="main">
+            <button class="openbtn" onclick="openNav()" ><i class="fa-solid fa-angles-right"></i></button>  
+            <a href="index.html" title="Go Home" class="homebtn" ><i class="fa-solid fa-house-chimney "></i></a>
+        </div>
+
+          <!-- Javascript logo button icon top right -->
+          <a href="js.html"><button title="Jump to Javascript World" class="js-btn"><i class="fa-brands fa-js-square"></i></button></a>
+
+          <!-- HTML logo button icon top rigth -->
+          <a href="hyper-markup.html"><button title="Jump To HTML World" class="html-btn"><i class="fa-brands fa-html5"></i></button></a>
+       
+        <button onclick="topFunction()" id="myBtn" class="back-to-top"><i class="fa-solid fa-circle-up"></i></button> 
+        
+        <div data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="2000">
+            <div class="heading">
+                <!-- <div class="hyper-sidebar">
+                
+                </div> -->
+                    <img src="images/css-logo.png" class = "hyper-logo" width="700" height="75" >
+                
+                    <h4 id="hyper-h1" class="hyper-h1"><span style="color:rgb(38, 156, 231)">CSS: Cascading Style Sheet<strong></strong></h4>
+                    <p id="definition"><span style="color:rgb(38, 156, 231)"><strong>Definition:</strong></span> 
+                        Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of 
+                        a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). 
+                        CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.<br><br>
+
+                        CSS is among the core languages of the open web and is standardized across Web browsers 
+                        according to W3C specifications. Previously, development of various parts of CSS 
+                        specification was done synchronously, which allowed versioning of the latest recommendations. 
+                        You might have heard about CSS1, CSS2.1, CSS3. However, CSS4 has never become an official version.<br><br>
+                        
+                        From CSS3, the scope of the specification increased significantly and the progress 
+                        on different CSS modules started to differ so much, that it became more effective 
+                        to develop and release recommendations separately per module. Instead of versioning 
+                        the CSS specification, W3C now periodically takes a snapshot of the latest stable state 
+                        of the CSS specification.<br><br>
+
+                        Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs</a>
+                    </p>
+                        
+                    
+                    <h5 id="history"><span style="color:rgb(38, 156, 231)">GETTING STARTED WITH CSS<strong></strong></h5>
+
+                        <p class="history-definition">
+                            <span style="color:rgb(38, 156, 231)"><strong>A Brief Hisory of CSS: </strong></span>
+                            The saga of CSS starts in 1994. Håkon Wium Lie works at CERN - the cradle of the 
+                            Web - and the Web is starting to be used as a platform for electronic publishing. 
+                            One crucial part of a publishing platform is missing, however: There is no way to 
+                            style documents. For example, there is no way to describe a newspaper-like layout 
+                            in a Web page. Having worked on personalized newspaper presentations at the MIT 
+                            Media Laboratory, Håkon saw the need for a style sheet language for the Web.
+
+                            Style sheets in browsers were not an entirely new idea. The separation of document 
+                            structure from the document's layout had been a goal of HTML from its inception in 
+                            1990. Tim Berners-Lee wrote his NeXT browser/editor in such a way that he could 
+                            determine the style with a simple style sheet. However, he didn't publish the syntax 
+                            for the style sheets, considering it a matter for each browser to decide how to best 
+                            display pages to its users. In 1992, Pei Wei developed a browser called Viola, which 
+                            had its own style sheet language..<br><br> 
+                            Source: &#9755 <a href="https://www.w3.org/Style/CSS20/history.html">w3.org</a>
+                        </p>
+
+                
+                    <h5 id="simple-document" ><span style="color:rgb(38, 156, 231)"><strong>STARTING WITH SOME HTML </strong></span><br><br>
+                        <span style="color:rgb(248, 250, 252)"> Our starting point is an HTML document. You can 
+                            copy the code from below if you want to work on your own computer. Save the code below as 
+                            index.html in a folder on your machine.</span>
+                    </h5>
+
+                    <img src="images/css-code-1.PNG" class="html-code1">
+                
+                    <h5 id="anatomy-of-html"> <span style="color:rgb(38, 156, 231)">ADDING CSS TO OUR  DOCUMENT</span></h5>
+                        <p class="paragraph-anatomy">The very first thing we need to do is to tell the HTML document 
+                            that we have some CSS rules we want it to use. There are three different ways to apply CSS 
+                            to an HTML document that you'll commonly come across, however, for now, we will look at the 
+                            most usual and useful way of doing so — linking CSS from the head of your document.<br><br>
+
+                            Create a file in the same folder as your HTML document and save it as 
+                            <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">styles.css.</span> 
+                            The <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">.css </span>
+                            extension shows that this is a CSS file.<br><br>
+                            
+                            To link <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">styles.css</span> 
+                            to <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">index.html</span>, 
+                            add the following line somewhere inside the <head> of the HTML document:
+                            <img  src="images/css-code-2.PNG" class="html-anatomy "><br><br>
+                            Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN Web Docs</a>
+                        </p>
+
+                    <div class="main-parts-of-our-element">   
+                        <p>This <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;link&gt;</span> 
+                            element tells the browser that we have a stylesheet, using the 
+                            <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">rel</span> 
+                            attribute, and the location of that stylesheet as the value of the
+                            <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)"> href </span>
+                            attribute. You can test that the CSS works by adding a rule to 
+                            <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">styles.css.</span> 
+                            Using your code editor, add the following to your CSS file:</p> 
+                    </div>
+
+                        <img src="images/css-code-3.PNG" id="attribute-pic" class="attribute-pic">
+                        <p class="paragraph-attribute">   
+                            Save your HTML and CSS files and reload the page in a web browser. The level 
+                            one heading at the top of the document should now be red. If that happens, 
+                            congratulations — you have successfully applied some CSS to an HTML document. 
+                            If that doesn't happen, carefully check that you've typed everything correctly.<br><br>
+
+                            You can continue to work in<span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)"> styles.css </span>
+                            locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the 
+                            CSS in the first panel is linked to the HTML document, just as we have with our document above.
+                        </p>
+
+                        <div id = "attribute-must-have" class="attribute-must-have">
+                            <strong><p id="styling-html-elements"style=" text-align:center; color:rgb(38, 156, 231)" >STYLING HTML ELEMENTS</p></strong>
+                                <P>
+                                    By making our heading red, we have already demonstrated that we can target and 
+                                    style an HTML element. We do this by targeting an element selector — this is a 
+                                    selector that directly matches an HTML element name. To target all paragraphs in 
+                                    the document, you would use the selector 
+                                    <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">p</span>. 
+                                    To turn all paragraphs green, you would use:
+                                </P>
+                          
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"> MDN Web Docs</a></p>
+                            
+                            <img src="images/css-code-4.PNG" class="attribute-must-have-pic">  
+                        </div>
+
+                        <div id= "nesting-elements" class="nesting-elements">
+                            <h5>     </h5>
+                            <P>
+                                You can target multiple selectors at the same time by separating the selectors 
+                                with a comma. If you want all paragraphs and all list items to be green, your rule would look like this:
+                            </P>
+                            <img src="images/css-code-5.PNG" class="nesting-pic">
+                        </div>
+
+                        <div class="nesting-elements2">
+                            <p>
+                                Try this out in the interactive editor below (edit the code boxes) or in your local CSS document.
+                            </p>
+                            <img src="images/css-code-6.PNG" class="nesting-pic2"><br><br><br>
+                            <p>
+                                <span style="color:rgb(38, 156, 231) "><strong>CHANGING THE DEFAULT BEHAVIOR OF ELEMENTS</strong></span><br><br><br>
+                                When we look at a well-marked up HTML document, even something as simple as our example, 
+                                we can see how the browser is making the HTML readable by adding some default styling. 
+                                Headings are large and bold and our list has bullets. This happens because browsers have 
+                                internal stylesheets containing default styles, which they apply to all pages by default; 
+                                without them all of the text would run together in a clump and we would have to style everything 
+                                from scratch. All modern browsers display HTML content by default in pretty much the same way.<br><br>
+
+                                However, you will often want something other than the choice the browser has made. 
+                                This can be done by choosing the HTML element that you want to change and using a 
+                                CSS rule to change the way it looks. A good example is 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;ul&gt;</span>, 
+                                an unordered list. It has list bullets. If you don't want those bullets, you can remove them like so:
+                            </p><br>
+                            
+                        </div>
+
+               
+                        <div id="empty-elements" class="empty-elements">
+                           
+                            <img src="images/css-code-7.PNG" class="empty-pic"><br><br><br>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"> MDN Web Docs</a></p>
+                            <p>
+                                <span style="color:rgb(38, 156, 231) "><strong>TRY ADDING THIS TO YOUR CSS NOW.</strong></span><br><br>
+
+                                The list-style-type property is a good property to look at on MDN to see which values are supported. Take a 
+                                look at the page for list-style-type and you will find an interactive example at the top of the page to try 
+                                some different values in, then all allowable values are detailed further down the page.<br><br>
+                                Looking at that page you will discover that in addition to removing the list bullets, you can change them — try 
+                                changing them to square bullets by using a value of square.
+                            </p>
+                        </div>
+
+                        <div class="anatomy-of-html-document">
+                            <h5 id="adding-a-class" style="color:rgb(38, 156, 231);text-align:center">ADDING A CLASS</h5>
+
+                            <P>
+                                So far, we have styled elements based on their HTML element names. This works as long as you want all of 
+                                the elements of that type in your document to look the same. Most of the time that isn't the case and so 
+                                you will need to find a way to select a subset of the elements without changing the others. The most common 
+                                way to do this is to add a class to your HTML element and target that class.<br><br>
+                                In your HTML document, add a class attribute to the second list item. Your list will now look like this:
+                            </P>
+
+                            <img src="images/css-code-8.PNG" class="anatomy-doc-pic"><br><br><br>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"> MDN Web Docs</a></p>
+
+                            <p>In your CSS, you can target the class of <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">special</span> 
+                                by creating a selector that starts with a full stop character. Add the following to your CSS file:</p>    
+                        </div>
+
+                        <div id="image" class="image">
+                            <img src="images/css-code-9.PNG" class="image-pic"><br><br><br>
+                            <p>Save and refresh to see what the result is.</p>
+
+                            <p>You can apply the class of <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">special</span> 
+                                to any element on your page that you want to have the same look as this list item. For example, you might want the 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;span&gt;</span> in the paragraph to 
+                                also be orange and bold. Try adding a <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">class</span> 
+                                of <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">special</span> to it, then reload your page 
+                                and see what happens.
+                            </p><br><br>
+
+                            <p>Sometimes you will see rules with a selector that lists the HTML element selector along with the class:</p>
+
+                            <img src="images/css-code-10.PNG" class="test-image"><br><br><br>
+
+                            <p>
+                                This syntax means "target any <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">li</span> 
+                                element that has a class of special". If you were to do this, then you would no longer be able to apply the class to 
+                                a <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;span&gt;</span> or another element 
+                                by adding the class to it; you would have to add that element to the list of selectors:
+                            </p>
+                        </div>
+
+                        <div id= "marking-up-text" class="marking-up-text">  
+                            <img src="images/css-code-11.PNG" class="marking-pic"><br><br><br>
+                            <p>
+                                As you can imagine, some classes might be applied to many elements 
+                                and you don't want to have to keep editing your CSS every time 
+                                something new needs to take on that style. Therefore, it is sometimes 
+                                best to bypass the element and refer to the class, unless you know that 
+                                you want to create some special rules for one element alone, and perhaps 
+                                want to make sure they are not applied to other things.
+                            </p>
+                        </div>
+
+                        <div id="paragraph" class="paragraph">
+                            <h5 id="styling-things" style="color:rgb(38, 156,231);text-align:center">STYLING THINGS BASED ON THEIR LOCATION IN A DOCUMENT</h5>
+
+                            <P>There are times when you will want something to look different based on where it is in the document. 
+                                There are a number of selectors that can help you here, but for now we will look at just a couple. 
+                                In our document, there are two<span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)"> &lt;em&gt; </span>
+                                elements — one inside a paragraph and the other inside a list item. To select only an 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;em&gt;</span> that is nested inside an 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;li&gt;</span> element, you can use a 
+                                selector called the descendant combinator, which takes the form of a space between two other selectors.<br><br>
+                                Add the following rule to your stylesheet:
+                            </P>
+
+                            <img src="images/css-code-12.PNG" class="paragraph-pic"><br><br><br>
+
+                            <p>
+                                This selector will select any <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;em&gt; </span>
+                                element that is inside (a descendant of) an <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;li&gt;</span>. 
+                                So in your example document, you should find that the <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;em&gt;</span>
+                                in the third list item is now purple, but the one inside the paragraph is unchanged.<br><br>
+
+                                Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy 
+                                level in the HTML. To do so, place a <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">+</span> 
+                                (an adjacent sibling combinator) between the selectors.
+                            </p>
+                        </div>
+
+                        <div id = "list" class="list">
+                            <p>Try adding this rule to your stylesheet as well:</p>
+
+                            <img src="images/css-code-13.PNG" class="list-pic"><br><br><br>
+
+                            <p>The live example below includes the two rules above. Try adding a rule to make a 
+                                span red if it is inside a paragraph. You will know if you have it right because 
+                                the span in the first paragraph will be red, but the one in the first list item will not change color.
+                            </p>
+
+                            <img src="images/css-code-14.PNG" class="list-pic2"><br><br><br>
+
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#adding_a_class"> MDN Web Docs</a></p>
+                        </div>
+
+                        <div id="links" class="links">
+                            <h5 id="styling-based-on-state" style="color:rgb(38, 156,231);text-align:center">STYLING THINGS BASED ON STATE</h5>
+                            <P>
+                                The final type of styling we shall take a look at in this tutorial is the ability to style 
+                                things based on their state. A straightforward example of this is when styling links. When 
+                                we style a link, we need to target the <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;a&gt; </span>
+                                (anchor) element. This has different states depending on whether it is unvisited, visited, 
+                                being hovered over, focused via the keyboard, or in the process of being clicked (activated). 
+                                You can use CSS to target these different states — the CSS below styles unvisited links pink and visited links green.
+                            </P>
+                                
+                                <img src="images/css-code-16.PNG" class="links-pic3"><br><br><br>
+                                
+                                <p>
+                                    You can change the way the link looks when the user hovers over it, for example 
+                                    by removing the underline, which is achieved by the next rule:
+                                </p>
+                                <img src="images/css-code-17.PNG" class="links-pic4"><br><br><br>
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#adding_a_class"> MDN Web Docs</a></p>
+
+                        </div>
+
+                        <div class="level-one-heading">
+                            <p>
+                                In the live example below, you can play with different values for the 
+                                various states of a link. I have added the rules above to it, and now 
+                                realize that the pink color is quite light and hard to read — why not 
+                                change that to a better color? Can you make the links bold?
+                            </p>
+
+                            <img src="images/css-code-18.PNG" class="level-one-heading-pic"><br><br><br>
+                            <p>
+                                We have removed the underline on our link on hover. You could remove 
+                                the underline from all states of a link. It is worth remembering however 
+                                that in a real site, you want to ensure that visitors know that a link is 
+                                a link. Leaving the underline in place can be an important clue for people 
+                                to realize that some text inside a paragraph can be clicked on — this is the
+                                 behavior they are used to. As with everything in CSS, there is the potential
+                                  to make the document less accessible with your changes — we will aim to 
+                                  highlight potential pitfalls in appropriate places.
+                            </p>
+
+                            <img src="images/css-code-19.PNG" class="level-one-heading-pic2"><br><br><br>
+
+                            <h4 id= "combining-selectors" style="text-align:center; color:rgb(38, 156, 231)">COMBINING SELECTORS AND COMBINATORS</h4><br><br>
+
+                            <P>It is worth noting that you can combine multiple selectors and combinators together. For example:</P>
+
+                            <img src="images/css-code-20.PNG" class="level-one-heading-pic3"><br><br><br>
+
+                            <p>You can combine multiple types together, too. Try adding the following into your code:</p>
+
+                            <img src="images/css-code-21.PNG" class="level-one-heading-pic4"><br><br><br>
+
+                            <p>
+                                This will style any element with a class of special, which is inside a 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;p&gt;</span>, 
+                                which comes just after an <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;h1&gt;</span>, 
+                                which is inside a <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;body&gt;</span>. Phew!
+
+                                In the original HTML we provided, the only element styled is 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(38, 156, 231)">&lt;span class="special"&gt;</span>.
+                                    
+                                Don't worry if this seems complicated at the moment — you'll soon start to get the hang of it as you write more CSS.
+                            </p>
+                            
+                            <h5 id="summary" style="color:rgb(38, 156,231);text-align:center">Summary</h5>
+                            <p>
+                                In this article, we have taken a look at a number of ways in which you can style a 
+                                document using CSS. We will be developing this knowledge as we move through the rest 
+                                of the lessons. However, you now already know enough to style text, apply CSS based 
+                                on different ways of targeting elements in the document, and look up properties and 
+                                values in the MDN documentation.<br><br><br>
+
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps/Getting_started#adding_a_class"> MDN Web Docs</a></p>
+                            </p>
+
+                        </div>
+            </div>
+            
+            
+                <footer>
+                    <p>By : Giovanni Kuan<br>
+                    <a href="mailto:giokuan@gmail.com">giokuan@gmail.com</a></p>
+                    <p>Kodego Mini Project 1</p>
+                </footer>
+            
+        </div>
+
+            
+
+           
+      
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-circle-up"></i></a> -->
+
+    <script src="asset/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

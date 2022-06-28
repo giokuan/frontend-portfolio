@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Bootstrap CSS Link -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- Bootstrap JS Link -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+     <!-- Google Font Link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/207e3aedc6.js" crossorigin="anonymous"></script>
+ 
+     <!-- Animate on Scroll Link -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     
+    <title>Learn Javascript</title>
+</head>
+<body class="js-body">
+ 
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" ><i class="fa-solid fa-angles-left"></i></a>
+            <!-- <a href="index.html" class="homebtn" ><i class="fa-solid fa-house-chimney display-block"></i></a> -->
+            <hr>
+            <a href="#hyper-h1">History of Javascript</a> 
+            <a href="#history">What is Javascript?</a> 
+            <a href="#simple-document">Javascript Origin</a>
+            <a href="#anatomy-of-html">Javascript Creator </a>
+            <a href="#javascript-vs-java">Javascript VS Java</a>
+            <a href="#ecmascript-is-born">ECMAScript is Born</a>
+            <a href="#the-paper-start">The paper that started a movement</a>
+            <a href="#hello-world">A Hello World Example</a>
+            <a href="#what-happened">What Happened?</a>
+            <a href="#basic-crash-course">Language Basic Crash Course</a>
+            <a href="#variables">Variables</a>
+            <a href="#comments">Comments</a>
+            <a href="#operators">Operators</a>
+            <a href="#styling-things">Conditionals</a>
+            <a href="#function">Function</a>
+            <a href="#styling-based-on-state">Events</a>
+            <a href="#supecharged">Supercharging our Example Website</a>
+            <a href="#image-changer">Adding an Image Changer</a>
+            <a href="#adding-welcome-message">Adding a Personalized Welcome Message</a>
+            <a href="#username-null">A Username of Null</a>
+            <a href="#conclusion">Conclusion</a>
+        </div>
+        
+        <div id="main">
+            <button class="openbtn" onclick="openNav()" ><i class="fa-solid fa-angles-right"></i></button>  
+            <a href="index.html" title="Go Home" class="homebtn" ><i class="fa-solid fa-house-chimney "></i></a>
+        </div>
+
+        <!-- HTML logo button icon top rigth -->
+        <a href="hyper-markup.html"><button title="Jump To HTML World" class="html-btn"><i class="fa-brands fa-html5"></i></button></a>
+
+          <!-- CSS logo button icon -->
+          <a href="cascading.html"><button title="Jump to CSS World" class="css-btn"><i class="fa-brands fa-css3-alt"></i></button></a>
+       
+        <button onclick="topFunction()" id="myBtn" class="back-to-top"><i class="fa-solid fa-circle-up"></i></button> 
+        
+        <div data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="2000">
+            <div class="heading">
+                <!-- <div class="hyper-sidebar">
+                
+                </div> -->
+                    <img src="images/js-logo-2.png" class = "hyper-logo" width="700" height="75" >
+                
+                    <h4 id="hyper-h1" class="hyper-h1"><span style="color:rgb(231, 200, 48)">THE HISTORY OF JAVASCRIPT<strong></strong></h4>
+                    <p id="definition">JavaScript is everywhere, and for the seventh year in a row, 
+                        it has been ranked the most commonly used programming language, with 67.8% of 
+                        developers employing it in 2019. Its ascent to the world's most popular programming 
+                        language is synonymous with the rise of the internet itself.<br><br>
+
+                        Created out of necessity, it is used to build 95.2% (1.52 billion) 
+                        of websites today, including some of the world's largest, like Facebook 
+                        and YouTube. Without it, we would not have popular and useful web apps 
+                        such as Google Maps and eBay. <br><br>
+                        
+                        So, without further ado, let's take a look at what JavaScript is,  how and why it was created, and what's next for the language.<br><br>
+
+                        Source: &#9755 <a href="https://www.springboard.com/blog/data-science/history-of-javascript/">Springboard by: T.J. DeGroat</a>
+                    </p>
+                        
+                    
+                    <h5 id="history"><span style="color:rgb(231, 200, 48)">WHAT IS JAVASCRIPT?<strong></strong></h5>
+
+                        <p class="history-definition">
+                            JavaScript is a scripting language that is one of the three core languages 
+                            used to develop websites. Whereas HTML and CSS give a website structure and 
+                            style, JavaScript lets you add functionality and behaviors to your website, 
+                            allowing your website's visitors to interact with content in many imaginative ways.<br><br>
+
+                            JavaScript is primarily a client-side language, meaning it runs on your 
+                            computer within your browser. However, more recently the introduction of 
+                            Node.js has allowed JavaScript to also execute code on servers.<br><br>
+
+                            Since its release, JavaScript has surpassed Java, Flash, and other 
+                            languages because it is relatively easy to learn, has a free and open 
+                            community, and, most importantly, is incredibly useful, allowing developers 
+                            to quickly create apps with audiences in the millions.<br><br>
+                            Source: &#9755 <a href="https://www.springboard.com/blog/data-science/history-of-javascript/">Springboard by: T.J. DeGroat</a>
+                        </p>
+
+                
+                    <h5 id="simple-document" ><span style="color:rgb(231, 200, 48)"><strong>JAVASCRIPT ORIGIN</strong></span><br><br>
+                        
+                    </h5>
+
+                    <img src="images/js-pic-1.PNG" class="html-code1"><br><br><br><br><br><br>
+                    
+                    
+                
+                    <h5 id="anatomy-of-html"> <span style="color:rgb(231, 200, 48)">Javascript Creator : Brendan Eich</span></h5>
+                        <p class="paragraph-anatomy">
+                            The early to mid-1990s was an important time for the internet. 
+                            Key players like Netscape and Microsoft were in the midst of browser wars, with Netscape's 
+                            Navigator and Microsoft's Internet Explorer going head to head.
+
+                            In September 1995, a Netscape programmer named Brendan Eich developed a 
+                            new scripting language in just 10 days. It was originally named Mocha, but 
+                            quickly became known as LiveScript and, later, JavaScript.<br><br>
+                            Source: &#9755 <a href="https://www.springboard.com/blog/data-science/history-of-javascript/">Springboard by: T.J. DeGroat</a>
+                        </p>
+
+                    <div class="main-parts-of-our-element">   
+                        <p style="text-align:justify">
+                            <span id="javascript-vs-java" style="color:rgb(231, 200, 48)"><strong>JAVASCRIPT VS. JAVA</strong></span><br><br>
+                            There's often some confusion about the two, but JavaScript and Java 
+                            (another popular programming language for data scientists after Python) 
+                            have almost nothing in common. The name JavaScript came from Netscape's 
+                            support of Java applets within its browser. Many say it was also a marketing 
+                            tactic to divert some attention from Java, which was the most buzzed-about 
+                            language at the time. To run Java programs, the code must be first compiled 
+                            into an executable form. On the other hand, JavaScript was created to be 
+                            interpreted at run time, making it much more dynamic (these days the boundary 
+                            of the two methods is a lot more blurred).<br><br>
+
+                            JavaScript didn't exactly get off to the best start. It didn't perform as well, 
+                            and those developing in Java considered JavaScript more of a “UI glue” to be 
+                            used mostly by designers and other non-engineers. But the reality is that having 
+                            a “glue” language allowed the internet to really flourish. Programmers could react 
+                            better to use events and compose interactive components. And due to that, JavaScript 
+                            spread like wildfire and very quickly became the lingua franca of the web.<br><br>
+                        </p> 
+                        <p style="text-align:justify">
+                            <span id="ecmascript-is-born" style="color:rgb(231, 200, 48)"><strong>ECMAScript Is Born</strong></span><br><br>
+                            In 1997, due to JavaScript,s rapid growth, it became clear that the language would 
+                            need to be properly maintained and managed. Therefore, Netscape handed the job of 
+                            creating a language specification to the European Computer Manufacturers Association 
+                            (ECMA), a body founded with the goal of standardizing computing. The ECMA specifications 
+                            were labeled ECMA-262 and ECMAScript languages included JavaScript, JScript, and ActionScript.
+
+                            Between 1997 and 1999, ECMA-262 had three revisions, but nearly 10 years later, 
+                            version 4 was abandoned due to differing opinions on the direction of the language 
+                            and its proposed features. Interestingly, many of these controversial features, 
+                            such as generators, iterators, and destructuring assignments, have been included 
+                            in more recent ECMAScript specifications.
+                        </p>
+                        <span id="the-paper-start" style="color:rgb(231, 200, 48)"><strong><h4>The Paper That Started a Movement</h4></strong></span>
+                    </div>
+
+
+                        <img src="images/js-pic-2.PNG" id="attribute-pic" class="attribute-pic">
+                        <p class="paragraph-attribute">   
+                            The year 2005 proved to be a big one for JavaScript. A paper released by Jesse James Garrett 
+                            introduced Ajax, a revolutionary suite of technologies that included JavaScript. Ajax vastly 
+                            improved user experience by allowing web pages to feel more like native desktop apps. This 
+                            really pushed JavaScript into the spotlight as a professional programming language.<br><br>
+
+                            This paper is considered to be one of the founding backbones of the JavaScript community. 
+                            At the time, JavaScript had many challenges, including its verbose nature when doing simple 
+                            things and the incompatibility issues between browsers. The community responded with large 
+                            and popular JavaScript frameworks and libraries, such as Dojo and Mootools and jQuery.
+                        </p>
+
+                        <div id = "attribute-must-have" class="attribute-must-have">
+                            <strong>
+                                <p id="styling-html-elements" style=" text-align:center; color:rgb(231, 200, 48)"> 
+                                The section below introduces some aspects of the core language and offers an opportunity to 
+                                play with a few browser API features too. Have fun!
+                                </p>
+                            </strong>
+
+                                <P>
+                                    <span id="hello-world" style="color:rgb(231, 200, 48)"><strong>A Hello world! example</strong></span><br><br>
+                                    JavaScript is one of the most popular modern web technologies! As your JavaScript skills grow, 
+                                    your websites will enter a new dimension of power and creativity.<br><br>
+                                    
+                                    However, getting comfortable with JavaScript is more challenging than getting comfortable 
+                                    with HTML and CSS. You may have to start small, and progress gradually. To begin, let's 
+                                    examine how to add JavaScript to your page for creating a Hello world! example. 
+                                    <span style="color:rgb(231, 200, 48)">(Hello world! is the standard for introductory programming examples.)</span>
+                                </P>
+                          
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+                            
+                                <ol>
+                                    <li>
+                                        Go to your test site and create a new folder named scripts. Within the scripts folder, 
+                                        create a new text document called <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">main.js</span>, 
+                                        and save it.<br><br>
+                                    </li>
+                                    <li>
+                                        In your <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">index.html</span> 
+                                        file, enter this code on a new line, just before the closing
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">&lt;/body&gt;</span>  tag
+                                         
+                                    </li>
+                                    <img src="images/js-pic-3.PNG" class="attribute-must-have-pic"><br><br><br>
+                                    <li>
+                                        This is doing the same job as the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">&lt;link&gt;</span> 
+                                        element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, 
+                                        and anything else on the page).<br><br>
+                                    </li>
+                                    <li>
+                                        Add this code to the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">main.js</span> file:
+                                    </li>
+                                    <img src="images/js-pic-4.PNG" class="attribute-must-have-pic">  <br><br><br>
+                                    <li>
+                                        Make sure the HTML and JavaScript files are saved. Then load 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">index.html</span> 
+                                        in your browser. You should see something like this:
+                                    </li>
+                                    <img src="images/js-pic-5.PNG" class="attribute-must-have-pic">  <br>
+                                </ol>
+
+                                <img src="images/js-pic-6.PNG" class="attribute-must-have-pic">  <br><br>
+                            
+                                
+                        </div>
+
+                        <div id= "nesting-elements" class="nesting-elements">
+                            <h5 id="what-happened"><strong>WHAT HAPPENED?</strong> </h5>
+                            <P>
+                                The heading text changed to Hello world! using JavaScript. 
+                                You did this by using a function called <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">querySelector()</span> 
+                                to grab a reference to your heading, and then store it in a variable called 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">myHeading</span>. 
+                                This is similar to what we did using CSS selectors. When you want to do something to an element, you need to select it first.<br><br>
+
+                                Following that, the code set the value of the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">myHeading </span>
+                                variable's <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">textContent</span> 
+                                property (which represents the content of the heading) to Hello world!.
+                            </P>
+                            <img src="images/js-pic-7.PNG" class="nesting-pic">
+                        </div>
+<!-- ?rr----------------------------------------------------------------------------------------------------------------------- -->
+                        <div class="nesting-elements2">
+                            <p style="color:rgb(231, 200, 48);text-align:center">
+                                <strong id="basic-crash-course">LANGUAGE BASICS CRASH COURSE</strong><br><br>
+                            </p>
+                            <p>
+                                To give you a better understanding of how JavaScript works, let's explain some of 
+                                the core features of the language. It's worth noting that these features are common 
+                                to all programming languages. If you master these fundamentals, you have a head start 
+                                on coding in other languages too!<br><br>
+                            </p>
+                            <h5 id="variables" style="color:rgb(231, 200, 48);text-align:center"><STRONG>VARIABLES</STRONG></h5>
+                            <P>
+                                Variables are containers that store values. You start by declaring a variable with 
+                                the let keyword, followed by the name you give to the variable:
+                            </P>
+                            <img src="images/js-pic-8.PNG" class="nesting-pic2"><br><br><br>
+                            <p>
+                                A semicolon at the end of a line indicates where a statement ends. It is only 
+                                required when you need to separate statements on a single line. However, some 
+                                people believe it's good practice to have semicolons at the end of each statement. 
+                                There are other rules for when you should and shouldn't use semicolons. For more 
+                                details, see Your Guide to Semicolons in JavaScript.<br><br>
+
+                                You can name a variable nearly anything, but there are some restrictions. 
+                                (See this section about naming rules.) If you are unsure, you can check your 
+                                variable name to see if it's valid.<br><br>
+                                
+                                JavaScript is case sensitive. This means myVariable is not the same as myvariable. 
+                                If you have problems in your code, check the case!<br><br>
+                                
+                                After declaring a variable, you can give it a value:
+                            </p>
+                            
+                        </div>
+
+               
+                        <div id="empty-elements" class="empty-elements">
+                           
+                            <img src="images/js-pic-9.PNG" class="empty-pic"><br><br><br>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+                            <p>
+                                Also, you can do both these operations on the same line:<br>
+                            </p>
+                            <img src="images/js-pic-10.PNG" class="empty-pic"><br><br><br>
+
+                            <p>
+                                You retrieve the value by calling the variable name:
+                            </p>
+                            <img src="images/js-pic-11.PNG" class="empty-pic"><br><br><br>
+
+                            <p>
+                                After assigning a value to a variable, you can change it later in the code:
+                            </p>
+                            <img src="images/js-pic-12.PNG" class="empty-pic"><br><br><br>
+                        </div>
+
+                        <div class="anatomy-of-html-document">
+                            <!-- <h5 id="adding-a-class" style="color:rgb(38, 156, 231);text-align:center">ADDING A CLASS</h5> -->
+
+                            <P>
+                                Note that variables may hold values that have different data types:
+                            </P>
+
+                            <img src="images/js-pic-13.PNG" class="anatomy-doc-pic"><br><br><br>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+
+                            <p>
+                                <span style="color:rgb(231, 200, 48)">So why do we need variables?</span> 
+                                Variables are necessary to do anything interesting in programming. If values 
+                                couldn't change, then you couldn't do anything dynamic, like personalize a 
+                                greeting message or change an image displayed in an image gallery.
+                            </p>    
+                        </div>
+
+                        <div id="image" class="image">
+                            
+
+                            <h4 id="comments" style="color:rgb(231, 200, 48);text-align: center;">COMMENTS</h4><br><br>
+                            <p>
+                                Comments are snippets of text that can be added along with code. 
+                                The browser ignores text marked as comments. You can write comments in JavaScript just as you can in CSS:
+                            </p>
+
+                            <img src="images/js-pic-14.PNG" class="image-pic"><br><br><br>
+
+                            <p>
+                                If your comment contains no line breaks, it's an option to put it behind two slashes like this:
+                            </p>
+
+                            <img src="images/js-pic-15.PNG" class="test-image"><br><br><br>
+
+                            <h4 id="operators" class="operators" style="color:rgb(231, 200, 48);text-align: center;">OPERATORS</h4><br><br>
+
+                            <p>
+                                An <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">operator</span> 
+                                is a mathematical symbol that produces a result based on two values (or variables). In the 
+                                following table, you can see some of the simplest operators, along with some examples to try in the JavaScript console.
+                            </p>
+                        </div>
+
+                        <div id= "marking-up-text" class="marking-up-text">  
+                            <img src="images/js-pic-16.PNG" class="marking-pic"><br><br><br>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+                            <p>
+                                There are a lot more operators to explore, but this is enough for now. See Expressions and operators for a complete list.
+                            </p>
+                            <img src="images/js-pic-17.PNG" class="marking-pic"><br><br><br>
+                        </div>
+
+                        <div id="paragraph" class="paragraph">
+                            <h5 id="styling-things" style="color:rgb(231, 200, 48);text-align:center">CONDITIONALS</h5>
+
+                            <P>
+                                Conditionals are code structures used to test if an expression returns true or not. 
+                                A very common form of conditionals is the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">
+                                    if ... else statement</span>. For example:
+                            </P>
+
+                            <img src="images/js-pic-18.PNG" class="paragraph-pic"><br><br><br>
+
+                            <p>
+                                The expression inside the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">
+                                    if( ... )</span> is the test. This uses the strict equality operator (as described above) to compare 
+                                    the variable <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">iceCream</span> 
+                                    with the string <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">chocolate</span> 
+                                    to see if the two are equal. If this comparison returns 
+                                    <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">true</span>, the first block 
+                                    of code runs. If the comparison is not true, the second block of code—after the 
+                                    <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">else </span>statement—runs instead.
+                            </p>
+                        </div>
+
+                        <div id = "list" class="list">
+                            <h4 id="function" style="color:rgb(231, 200, 48);text-align:center">FUNCTION</h4><br><br>
+
+                            <p>
+                                <span style="color:rgb(231, 200, 48)">Functions</span> are a way of packaging 
+                                functionality that you wish to reuse. It's possible to define a body of code as a 
+                                function that executes when you call the function name in your code. This is a good 
+                                alternative to repeatedly writing the same code. You have already seen some uses of 
+                                functions. For example:
+                            </p>
+
+                            <img src="images/js-pic-19.PNG" class="list-pic"><br><br>
+                            <img src="images/js-pic-20.PNG" class="list-pic"><br><br><br>
+
+                            <p>
+                                These functions, <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">document.querySelector</span> 
+                                and <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">alert</span>, are built into the browser.<br><br>
+
+                                If you see something which looks like a variable name, but it's followed by parentheses— 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">( )</span> —it 
+                                is likely a function. Functions often take <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">arguments</span>:
+                                 bits of data they need to do their job. Arguments go inside the parentheses, separated by commas if there is more than one argument.<br><br>
+
+                                For example, the<span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)"> alert()</span> 
+                                function makes a pop-up box appear inside the browser window, but we need to give it a string as an argument 
+                                to tell the function what message to display.<br><br>
+
+                                You can also define your own functions. In the next example, we create a simple function which 
+                                takes two numbers as arguments and multiplies them:
+                            </p>
+
+                            <img src="images/js-pic-21.PNG" class="list-pic2"><br><br><br>
+
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+                        
+                            <p>
+                                Try running this in the console; then test with several arguments. For example:
+                            </p>
+                            <img src="images/js-pic-22.PNG" class="list-pic2"><br><br><br>
+                            <img src="images/js-pic-23.PNG" class="list-pic2"><br><br><br>
+                        </div>
+
+                        <div id="links" class="links">
+                            <h5 id="styling-based-on-state" style="color:rgb(231, 200, 48);text-align:center">EVENTS</h5>
+                            <P>
+                                Real interactivity on a website requires event handlers. These are code structures that 
+                                listen for activity in the browser, and run code in response. The most obvious example is 
+                                handling the click event, which is fired by the browser when you click on something with 
+                                your mouse. To demonstrate this, enter the following into your console, then click on the current webpage:
+                            </P>
+                                
+                                <img src="images/js-pic-24.PNG" class="links-pic3"><br><br><br>
+                                
+                                <p>
+                                    There are many ways to attach an event handler to an element. Here we select the
+                                    <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)"> &lt;html&gt; </span>
+                                    element. We then call its <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">addEventListener()</span> 
+                                    function, passing in the name of the event to listen to 
+                                    <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">('click')</span> and a function to 
+                                    run when the event happens.<br><br><br>
+
+                                    Note that
+                                </p>
+                                <img src="images/js-pic-25.PNG" class="links-pic4"><br><br><br>
+
+                                <p>
+                                    is equivalent to
+                                </p>
+                                <img src="images/js-pic-26.PNG" class="links-pic4"><br><br><br>
+
+                                <p>
+                                    It's just shorter.<br><br>
+
+                                    The functions we just passed to <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">addEventListener()</span> here are called anonymous functions, because they don't have a name. There's an alternative way of writing anonymous functions, which we call an arrow function. An arrow function uses <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">() => </span>instead of <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">function ()</span>:<br><br>
+                                </p>
+                                <img src="images/js-pic-27.PNG" class="links-pic4"><br><br><br>
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+
+                        </div>
+
+                        <div class="level-one-heading">
+                            <h4 id="supecharged" style="color:rgb(231, 200, 48);text-align:center">SUPERCHARGING OUR EXAMPLE WEBSITE</h4><br><br><br>
+                            <p>
+                                With this review of JavaScript basics completed (above), let's add some new features to our example site.<br><br>
+
+                                Before going any further, delete the current contents of your 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">main.js</span> 
+                                file — the bit you added earlier during the "Hello world!" example — and save the empty file. 
+                                If you don't, the existing code will clash with the new code you are about to add.<br><br>
+                            </p>
+                            <h4 id="image-changer" style="color:rgb(231, 200, 48);text-align:center">ADDING AN IMAGE CHANGER</h4><br><br>
+
+                            <!-- <img src="images/css-code-18.PNG" class="level-one-heading-pic"><br><br><br> -->
+                            <p>
+                                In this section, you will learn how to use JavaScript and DOM API features to alternate 
+                                the display of one of two images. This change will happen as a user clicks the displayed image.
+                            </p>
+                                <ol>
+                                    <li>
+                                        Choose an image you want to feature on your example site. Ideally, the image 
+                                        will be the same size as the image you added previously, or as close as possible.<br><br>
+                                    </li>
+                                    <li>
+                                        Save this image in your <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">images </span>folder.<br><br>
+                                    </li>
+                                    <li>
+                                        Rename the image firefox2.png.<br><br>
+                                    </li>
+                                    <li>
+                                        Add the JavaScript below to your <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">main.js</span> file.
+                                    </li>
+                                    <img src="images/js-pic-28.PNG" class="level-one-heading-pic2"><br><br><br>
+                                    <li>
+                                        Save all files and load <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">index.html</span> 
+                                        in the browser. Now when you click the image, it should change to the other one.<br><br><br>
+                                    </li>
+                                </ol>
+
+                            <!-- <img src="images/js-pic-29.PNG" class="level-one-heading-pic2"><br><br><br> -->
+
+                            <!-- <h4 id= "combining-selectors" style="text-align:center; color:rgb(38, 156, 231)">COMBINING SELECTORS AND COMBINATORS</h4><br><br> -->
+
+                            <P>
+                                This is what happened. You stored a reference to your 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">&lt;img&gt;</span> 
+                                element in the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">myImage</span> 
+                                variable. Next, you made this variable's <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">onclick</span> 
+                                event handler property equal to a function with no name (an "anonymous" function). So every time this element is clicked:
+
+                            </P>
+                                <ol>
+                                    <li>
+                                        The code retrieves the value of the image's 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">src</span> attribute.<br><br>
+                                    </li>
+                                    <li>
+                                        The code uses a conditional to check if the<span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)"> src </span>
+                                        value is equal to the path of the original image:<br><br>
+                                    </li>
+                                    <ol style="list-style-type: lower-roman">
+                                        <li>
+                                            If it is, the code changes the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">src</span> 
+                                            value to the path of the second image, forcing the other image to be loaded inside the 
+                                            <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">&lt;img&gt;</span> element.<br><br>
+                                        </li>
+                                        <li>
+                                            If it isn't (meaning it must already have changed), the 
+                                            <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">src</span> 
+                                            value swaps back to the original image path, to the original state.
+                                        </li>
+                                    </ol>
+                                </ol><br><br><br>
+
+                                <h4 id="adding-welcome-message" style="color:rgb(231, 200, 48);text-align:center">ADDING A PERSONALIZED WELCOME MESSAGE</h4><br><br>
+
+                            <!-- <img src="images/css-code-20.PNG" class="level-one-heading-pic3"><br><br><br> -->
+
+                            <p>
+                                Next, let's change the page title to a personalized welcome message when the user 
+                                first visits the site. This welcome message will persist. Should the user leave the 
+                                site and return later, we will save the message using the Web Storage API. We will 
+                                also include an option to change the user, and therefore, the welcome message.
+
+                            </p>
+                                <ol>
+                                    <li>
+                                        In index.html, add the following line just before the 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">&lt;script&gt;</span>  element:
+                                    </li>
+                                    <img src="images/js-pic-29.PNG" class="level-one-heading-pic4"><br><br><br>
+                                    <li>
+                                        In <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">main.js</span>, 
+                                        place the following code at the bottom of the file, exactly as it is written. This takes 
+                                        references to the new button and the heading, storing each inside variables:
+                                    </li>
+                                    <img src="images/js-pic-30.PNG" class="level-one-heading-pic4"><br><br><br>
+                                    <li>
+                                        Add the function below to set the personalized greeting. This won't do anything yet, but this will change soon.<br><br>
+                                    </li>
+                                    <img src="images/js-pic-31.PNG" class="level-one-heading-pic4"><br><br><br>
+                                    <p>
+                                        The <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setUserName()</span> 
+                                        function contains a <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">prompt() </span>
+                                        function, which displays a dialog box, similar to 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">alert()</span>. 
+                                        This <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">prompt()</span> 
+                                        function does more than <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">alert()</span>, 
+                                        asking the user to enter data, and storing it in a variable after the user clicks OK. In this case, we are asking 
+                                        the user to enter a name. Next, the code calls on an API 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">localStorage</span>, 
+                                        which allows us to store data in the browser and retrieve it later. We use localStorage's 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setItem()</span> 
+                                        function to create and store a data item called 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">'name'</span>, 
+                                        setting its value to the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">myName</span> 
+                                        variable which contains the user's entry for the name. Finally, we set the 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">textContent</span> 
+                                        of the heading to a string, plus the user's newly stored name.
+                                    </p>
+                                    <li>
+                                        Add the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">
+                                            if ... else</span> block (below). We could call this initialization code, as it structures 
+                                            the app when it first loads.<br><br>
+                                    </li>
+                                    <img src="images/js-pic-32.PNG" class="level-one-heading-pic4"><br><br><br>
+
+                                    <p>
+                                        This first line of this block uses the negation operator (logical NOT, 
+                                        represented by the<span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)"> !</span>) 
+                                        to check whether the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">name</span> 
+                                        data exists. If not, the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setUserName()</span> 
+                                        function runs to create it. If it exists (that is, the user set a user name during a previous visit), we retrieve 
+                                        the stored name using <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">getItem()</span> 
+                                        and set the <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">textContent</span> 
+                                        of the heading to a string, plus the user's name, as we did inside 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setUserName()</span>.
+                                    </p>
+                                    <li>
+                                        Put this <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">onclick</span> 
+                                        event handler (below) on the button. When clicked, 
+                                        <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setUserName()</span> 
+                                        runs. This allows the user to enter a different name by pressing the button.<br><br>
+                                    </li>
+                                    <img src="images/js-pic-33.PNG" class="level-one-heading-pic4"><br><br><br>
+                                </ol>
+
+                            <!------------------------------------------------------------fff----------------------------------------------------------->
+                                <h4 id="username-null" style="color:rgb(231, 200, 48);text-align:center">A USER NAME OF NULL?</h4><br><br><br>
+                            <p>
+                                When you run the example and get the dialog box that prompts you to enter your user name, 
+                                try pressing the Cancel button. You should end up with a title that reads Mozilla is cool, 
+                                null. This happens because—when you cancel the prompt—the value is set as 
+                                <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">null</span>. 
+                                Null is a special value in JavaScript that refers to the absence of a value.<br><br>
+
+                                Also, try clicking OK without entering a name. You should end up with a title that reads 
+                                Mozilla is cool, for fairly obvious reasons.<br><br>
+                                
+                                To avoid these problems, you could check that the user hasn't entered a blank name. 
+                                Update your <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setUserName()</span> function to this:
+                            </p>
+
+                            <img src="images/js-pic-34.PNG" class="level-one-heading-pic4"><br><br><br>
+                            
+                            
+                            <p>
+                                In human language, this means: If <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">myName</span> has no value, run <span style="background-color:rgb(71, 69, 69); color:rgb(231, 200, 48)">setUserName()</span> again from the start. If it does have a value (if the above statement is not true), then store the value in localStorage and set it as the heading's text.
+
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p><br><br>
+                            </p>
+
+                            <h5 id="conclusion" style="color:rgb(231, 200, 48);text-align:center">CONCLUSION</h5><br><br>
+
+                            <p>
+                                If you have followed all the instructions in this article, you should end up with a page that looks something like the image below.
+                            </p>
+
+                            <img src="images/js-pic-35.PNG" class="level-one-heading-pic4"><br><br><br>
+
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics"> MDN Web Docs</a></p>
+                        </div>
+            </div>
+            
+            
+                <footer>
+                    <p>By : Giovanni Kuan<br>
+                    <a href="mailto:giokuan@gmail.com">giokuan@gmail.com</a></p>
+                    <p>Kodego Mini Project 1</p>
+                </footer>
+            
+        </div>
+
+            
+
+           
+      
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-circle-up"></i></a> -->
+
+    <script src="asset/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

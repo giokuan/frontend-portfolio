@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+     <!-- Bootstrap CSS Link -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+     <!-- Bootstrap JS Link -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+ 
+     <!-- Google Font Link -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+     <script src="https://kit.fontawesome.com/207e3aedc6.js" crossorigin="anonymous"></script>
+ 
+     <!-- Animate on Scroll Link -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     
+    <title>Learn HTML</title>
+</head>
+<body class="hyper-body">
+ 
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" ><i class="fa-solid fa-angles-left"></i></a>
+            <!-- <a href="index.html" class="homebtn" ><i class="fa-solid fa-house-chimney display-block"></i></a> -->
+            <hr>
+            <a href="#history">History</a> 
+            <a href="#simple-document">Simple Document</a>
+            <a href="#attribute-pic">Attribute</a>
+            <a href="#nesting">Nesting Elements</a>
+            <a href="#empty">Empty Elements</a>
+            <a href="#img-image">Images</a>
+            <a href="#text-marking">Marking up Text</a>
+            <a href="#para">Paragraphs</a>
+            <a href="#list-list">List</a>
+            <a href="#links-links">Links</a>
+        </div>
+        
+        <div id="main">
+            <button class="openbtn" onclick="openNav()" ><i class="fa-solid fa-angles-right"></i></button>  
+            <a href="index.html" title="Go Home" class="homebtn" ><i class="fa-solid fa-house-chimney "></i></a>
+        </div>
+
+        <!-- Javascript logo button icon -->
+        <a href="js.html"><button title="Jump to Javascript World" class="js-btn"><i class="fa-brands fa-js-square"></i></button></a>
+
+         <!-- CSS logo button icon -->
+        <a href="cascading.html"><button title="Jump to CSS World" class="css-btn"><i class="fa-brands fa-css3-alt"></i></button></a>
+       
+        <button onclick="topFunction()" id="myBtn" class="back-to-top"><i class="fa-solid fa-circle-up"></i></button> 
+        
+        <div data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="2000">
+            <div class="heading">
+                <!-- <div class="hyper-sidebar">
+                
+                </div> -->
+                    <img src="images/html.logo.png" class = "hyper-logo" width="900" height="75" >
+                
+                    <h4 class="hyper-h1">HTML: Hyper Text Markup Language</h4>
+                    <p id="definition"><span style="color:rgb(227, 79,38)"><strong>Definition:</strong></span> 
+                        The HyperText Markup Language or HTML is the standard markup language for documents 
+                        designed to be displayed in a web browser. It can be assisted by technologies such 
+                        as Cascading Style Sheets and scripting languages such as JavaScript.<br><br> 
+                        Source:&#9755;<a href="https://www.google.com/search?q=html+definition&rlz=1C1ONGR_enPH932PH932&oq=html+defin&aqs=chrome.0.69i59j69i57j0i512l8.9153j0j15&sourceid=chrome&ie=UTF-8">Wikipedia</a>
+                    </p>
+                    
+                    <h5 id="history">HISTORY</h5>
+
+                        <p class="history-definition">
+                            <span style="color:rgb(227, 79,38)"><strong>A Brief Hisory of HTML: </strong></span>The first version of HTML was written by Tim Berners-Lee in 1993. 
+                            Since then, there have been many different versions of HTML. The most widely used version throughout the 2000's was HTML 4.01, which became an official standard in December 1999.<br><br>
+                            Another version, XHTML, was a rewrite of HTML as an XML language. 
+                            XML is a standard markup language that is used to create other markup languages. 
+                            Hundreds of XML languages are in use today, including GML (Geography Markup Language), MathML, MusicML, and RSS (Really Simple Syndication). 
+                            Since each of these languages was written in a common language (XML), their content can easily be shared across applications. 
+                            This makes XML potentially very powerful, and it's no surprise that the W3C would create an XML version of HTML (again, called XHTML). 
+                            XHTML became an official standard in 2000, and was updated in 2002. XHTML is very similar to HTML, but has stricter rules. 
+                            Strict rules are necessary for all XML languages, because without it, interoperability between applications would be impossible.<br><br> Source: &#9755 <a href="https://www.washington.edu/accesscomputing/webd2/student/unit1/module3/html_history.html#:~:text=The%20first%20version%20of%20HTML,HTML%20as%20an%20XML%20language.">University of Washington</a>
+                        </p>
+
+                
+                    <h5 id="simple-document" >A SIMPLE HTML DOCUMENT</h5>
+
+                    <img src="images/html1.png" class="html-code1">
+                
+                    <h5 id="anatomy-of-html">ANATOMY OF HTML</h5>
+                        <p class="paragraph-anatomy">Let's explore this paragraph element a bit further.
+                            <img src="images/html-anatomy.png" class="html-anatomy">
+                        </p>
+
+                    <div class="main-parts-of-our-element">   
+                        <p>The main parts of our element are as follows:</p> 
+                        <ol>
+                            <li>
+                                <span style="color:rgb(227, 79,38)"><strong>The opening tag:</strong></span> 
+                                This consists of the name of the element (in this case, p), wrapped in opening 
+                                and closing angle brackets. This states where the element begins or starts to 
+                                take effect — in this case where the paragraph begins.<br><br>
+                            </li>
+                            <li>
+                                <span style="color:rgb(227, 79,38)"><strong>The closing tag:</strong></span> 
+                                This is the same as the opening tag, except that it includes a forward slash 
+                                before the element name. This states where the element ends — in this case where 
+                                the paragraph ends. Failing to add a closing tag is one of the standard beginner 
+                                errors and can lead to strange results.<br><br>
+                            </li>
+                            <li>
+                                <span style="color:rgb(227, 79,38)"><strong>The content:</strong></span> 
+                                This is the content of the element, which in this case, is just text.<br><br>
+                            </li>
+                            <li>
+                                <span style="color:rgb(227, 79,38)"><strong>The element:</strong></span> 
+                                The opening tag, the closing tag, and the content together comprise the element.<br><br><br>
+
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+                            </li>
+                            <p style="text-align:left">Elements can also have attributes that look like the following:</p>
+                        </ol>     
+                    </div>
+
+                        <img src="images/html3.png" id="attribute-pic" class="attribute-pic">
+
+                        <p class="paragraph-attribute">   
+                            Attributes contain extra information about the element that you don't want to 
+                            appear in the actual content. Here, class is the attribute name and editor-note 
+                            is the attribute value. The class attribute allows you to give the element a non-unique 
+                            identifier that can be used to target it (and any other elements with the same class value) 
+                            with style information and other things.
+                        </p>
+
+                        <div class="attribute-must-have">
+                            <strong><p style=" text-align:center; color:rgb(227, 79,38)" >An attribute should always have the following:</p></strong>
+                            <ol >
+                                <li>
+                                    A space between it and the element name (or the previous attribute, if the element already has one or more attributes).<br><br>
+                                </li>
+                                <li>
+                                    The attribute name followed by an equal sign.<br><br>
+                                </li>
+                                <li>
+                                    The attribute value wrapped by opening and closing quotation marks.<br><br>
+                                </li>
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+                            </ol>
+                            <img src="images/html4.png" class="attribute-must-have-pic">  
+                        </div>
+
+                        <div id= "nesting-elements" class="nesting-elements">
+                            <h5 id="nesting">NESTING ELEMENTS</h5>
+
+                            <P>
+                                You can put elements inside other elements too — this is called nesting. If we wanted to 
+                                state that our cat is very grumpy, we could wrap the word "very" in a 
+                                <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;strong&gt;</span> 
+                                element, which means that the word is to be strongly emphasized:
+                            </P>
+                            <img src="images/nesting-elements-pic.png" class="nesting-pic">
+                        </div>
+
+                        <div class="nesting-elements2">
+                            <p>
+                                You do however need to make sure that your elements are properly nested. 
+                                In the example above, we opened the <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;p&gt;</span>  
+                                element first, then the  <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">   &lt;strong&gt;</span> 
+                                element; therefore, we have to close the<span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">   &lt;strong&gt;</span> 
+                                element first, then the  <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">   &lt;p&gt;  </span>
+                                element. The following is incorrect:
+                            </p>
+                            
+                            <img src="images/nesting-pic2.PNG" class="nesting-pic2"><br><br><br>
+
+                            <p>
+                                The elements have to open and close correctly so that they are clearly 
+                                inside or outside one another. If they overlap as shown above, then 
+                                your web browser will try to make the best guess at what you were trying 
+                                to say, which can lead to unexpected results. So don't do it!
+                            </p><br>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+                        </div>
+
+               
+                        <div id="empty-elements" class="empty-elements">
+                            <h5 id="empty" style="color:rgb(227, 79,38);text-align:center">EMPTY ELEMENTS</h5>
+
+                            <P>
+                                Some elements have no content and are called empty elements. Take the 
+                                <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;img&gt;</span> 
+                                element that we already have in our HTML page:
+                            </P>
+
+                            <img src="images/empty-elements-pic.png" class="empty-pic"><br><br><br>
+
+                            <p>
+                                This contains two attributes, but there is no closing 
+                                <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;/img&gt; </span> 
+                                tag and no inner content. This is because an image element doesn't wrap content to affect it. 
+                                Its purpose is to embed an image in the HTML page in the place it appears.
+                            </p>
+                        </div>
+
+                        <div class="anatomy-of-html-document">
+                            <h5 style="color:rgb(227, 79,38);text-align:center">ANATOMY OF AN HTML DOCUMENTS</h5>
+
+                            <P>
+                                That wraps up the basics of individual HTML elements, but they aren't handy on their own. 
+                                Now we'll look at how individual elements are combined to form an entire HTML page. Let's
+                                revisit the code we put into our <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">index.html</span> 
+                                example (which we first met in the Dealing with files article):
+                            </P>
+
+                            <img src="images/anatomy-of-html-doc.png" class="anatomy-doc-pic"><br><br><br>
+
+                            <p>Here, we have the following:</p>
+                            <ul>
+                                <li>
+                                    <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;!DOCTYPE html&gt; </span> — <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype">doctype</a>. It is a required preamble. In the mists of time, when HTML was young (around 1991/92), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things. However these days, they don't do much and are basically just needed to make sure your document behaves correctly. That's all you need to know for now.<br><br>
+                                </li>
+                                <li>
+                                    <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;html&gt;&lt;/html&gt;</span>  — the  <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;html&gt; </span> element. This element wraps all the content on the entire page and is sometimes known as the root element.<br><br>
+                                </li>
+                                <li>
+                                    <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;head&gt;&lt;/head&gt; </span>— the &lt;head&gt; element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.<br><br>
+                                </li>
+                                <li>
+                                    <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;meta charset="utf-8"&gt;</span> — This element sets the character set your document should use to UTF-8 which includes most characters from the vast majority of written languages. Essentially, it can now handle any textual content you might put on it. There is no reason not to set this and it can help avoid some problems later on.<br><br>
+                                </li>
+                                <li>
+                                    <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;title&gt;&lt;/title&gt; </span>— the  <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;title&gt; </span> element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in. It is also used to describe the page when you bookmark/favorite it.<br><br>
+                                </li>
+                                <li>
+                                    <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;body&gt;&lt;/body&gt; </span> — the <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;body&gt; </span> element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.<br><br>
+                                </li>
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+                            </ul>
+                        </div>
+
+                        <div id="image" class="image">
+                            <h5 id="img-image" style="color:rgb(227, 79,38);text-align:center">IMAGES</h5>
+
+                            <P>
+                                Let's turn our attention to the <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;img&gt; </span> 
+                                element again:
+                            </P>
+                            
+                            <img src="images/image-pic.png" class="image-pic"><br><br><br>
+
+                            <p>
+                                As we said before, it embeds an image into our page in the position it appears. It does this via the 
+                                <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">src</span> (source) attribute,
+                                 which contains the path to our image file.
+                            </p>
+                            
+                            <p>
+                                We have also included an <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">alt </span>
+                                (alternative) attribute. In this attribute, you specify descriptive text for users who cannot see the image, 
+                                possibly because of the following reasons:
+                            </p>
+                            
+                            <ol>
+                                <li>
+                                    They are visually impaired. Users with significant visual impairments often use tools 
+                                    called screen readers to read out the alt text to them.
+                                </li>
+                                <li>
+                                    Something has gone wrong causing the image not to display. For example, try 
+                                    deliberately changing the path inside your <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> src</span>
+                                     attribute to make it incorrect. If you save and reload the page, you should see something like this in place of the image:
+                                </li>
+                            </ol>
+
+                            <img src="images/test-image.png" class="test-image"><br><br><br>
+                            <p>
+                                The keywords for alt text are "descriptive text". The alt text you write should provide the reader with enough information to have a good idea of what the image conveys. In this example, our current text of "My test image" is no good at all. A much better alternative for our Firefox logo would be "The Firefox logo: a flaming fox surrounding the Earth."
+                            </p>
+                            <p>Try coming up with some better alt text for your image now.</p>
+                        </div>
+
+                        <div id= "marking-up-text" class="marking-up-text">
+                            <h5 id="text-marking" style="color:rgb(227, 79,38);text-align:center">MARKING UP TEXT</h5>
+                            <P>This section will cover some of the essential HTML elements you'll use for marking up the text.</P>
+                            <h6 style="color:rgb(227, 79,38);text-align:center">Headings</h6><br>
+                            <p>
+                                Heading elements allow you to specify that certain parts of your content are headings — or subheadings. In the same way that a book has the main title, chapter titles, and subtitles, an HTML document can too. HTML contains 6 heading levels, <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;h1&gt;</span> - <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;h6&gt;</span>, although you'll commonly only use 3 to 4 at most:
+                            </p>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+                            <img src="images/marking-pic.png" class="marking-pic"><br><br>
+                            <img src="images/marking-note-1.PNG" class="marking-note1"><br><br><br>
+                            <p>Now try adding a suitable title to your HTML page just above your <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;img&gt; </span>element.</p>
+                            <img src="images/marking-note-2.PNG" class="marking-note2"><br><br><br>
+                        </div>
+
+                        <div id="paragraph" class="paragraph">
+                            <h5 id="para" style="color:rgb(227, 79,38);text-align:center">PARAGRAPHS</h5>
+                            <P>As explained above, <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;p&gt; </span> elements are for containing paragraphs of text; you'll use these frequently when marking up regular text content:</P>
+                            <img src="images/paragraph-pic.PNG" class="paragraph-pic"><br><br><br>
+                            <p>
+                                Add your sample text (you should have it from What will your website look like?) into one or a few paragraphs, placed directly below your <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;img&gt; </span> element.
+                            </p>
+                        </div>
+
+                        <div id = "list" class="list">
+                            <h5 id="list-list" style="color:rgb(227, 79,38);text-align:center">LIST</h5>
+                            <p>A lot of the web's content is lists and HTML has special elements for these. 
+                                Marking up lists always consists of at least 2 elements. The most common list types are ordered and unordered lists:
+                            </p>
+                            <ol>
+                                <li>
+                                    Unordered lists are for lists where the order of the items doesn't matter, such as a shopping list. 
+                                    These are wrapped in a <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;ul&gt;</span> element.<br>
+                                </li>
+                                <li>
+                                    Ordered lists are for lists where the order of the items does matter, such as a recipe. 
+                                    These are wrapped in an , <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;ol&gt; </span> element.
+                                </li>
+                            </ol><br>
+
+                            <p>Each item inside the lists is put inside an  <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;li&gt; </span> 
+                                (list item) element.
+                            </p>
+
+                            <p>
+                                For example, if we wanted to turn the part of the following paragraph fragment into a list
+                            </p>
+
+                            <img src="images/list-pic.PNG" class="list-pic"><br><br><br>
+
+                            <p>
+                                We could modify the markup to this
+                            </p>
+
+                            <img src="images/list-pic2.PNG" class="list-pic2"><br><br><br>
+
+                            <p>
+                                Try adding an ordered or unordered list to your example page.
+                            </p>
+                            <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+                        </div>
+
+                        <div id="links" class="links">
+                            <h5 id="links-links" style="color:rgb(227, 79,38);text-align:center">LINKS</h5>
+                            <P>
+                                Links are very important — they are what makes the web a web! To add a link, we need to use a simple element — 
+                                <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)"> &lt;p&gt; </span>Each item inside 
+                                the lists is put inside an  <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;a&gt; </span> — 
+                                "a" being the short form for "anchor". To make text within your paragraph into a link, follow these steps:
+                            </P>
+                                <ol>
+                                    <li>
+                                        Choose some text. We chose the text "Mozilla Manifesto".
+                                    </li>
+                                    <li>
+                                        Wrap the text in an <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;a&gt;</span> 
+                                        element, as shown below:
+                                        
+                                    </li>
+                                    <img src="images/links-pic1.PNG" class="links-pic1"><br><br>
+                                    <li>
+                                        Give the <span style="color:rgb(227, 79,38); background-color:rgb(27, 26, 26)">&lt;a&gt;</span> 
+                                        element an href attribute, as shown below:
+                                    </li>
+                                    <img src="images/links-pic2.PNG" class="links-pic2"><br><br>
+                                    <li>
+                                        Fill in the value of this attribute with the web address that you want the link to:
+                                    </li>
+                                    <img src="images/links-pic3.PNG" class="links-pic3"><br><br><br>
+                                </ol>
+                                <p>
+                                    You might get unexpected results if you omit the https:// or http:// part, called the protocol,
+                                     at the beginning of the web address. After making a link, click it to make sure it is sending you where you wanted it to.
+                                </p>
+                                <img src="images/links-pic4.PNG" class="links-pic4"><br><br><br>
+                                <p style="text-align:center">Source: &#9755 <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics"> MDN Mozilla Development Network</a></p>
+
+                        </div>
+            </div>
+            
+            
+                <footer>
+                    <p>By : Giovanni Kuan<br>
+                    <a href="mailto:giokuan@gmail.com">giokuan@gmail.com</a></p>
+                    <p>Kodego Mini Project 1</p>
+                </footer>
+            
+        </div>
+
+            
+
+           
+      
+    <!-- <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fa-solid fa-circle-up"></i></a> -->
+
+    <script src="asset/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
